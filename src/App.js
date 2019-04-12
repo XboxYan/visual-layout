@@ -1,16 +1,21 @@
 import './App.css';
 
-import React, { Component } from 'react';
-import { Button } from 'antd';
+import React from 'react';
+import { Layout } from 'antd';
 
-  class App extends Component {
-    render() {
-      return (
-        <div className="App">
-          <Button type="primary">Button1</Button>
-        </div>
-      );
-    }
-  }
+const { Header, Footer, Sider, Content } = Layout;
 
-  export default App;
+
+
+const App = () => (
+	<Layout>
+		<Sider>Sider</Sider>
+		<Layout>
+			<Header>Header</Header>
+			<Content>Content</Content>
+			<Footer>Footer</Footer>
+		</Layout>
+	</Layout>
+)
+
+export default App;
